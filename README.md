@@ -33,10 +33,10 @@ A full-stack weather application built with **Laravel 11** (REST API + JWT Auth)
 
 ## Prerequisites
 
-- PHP 8.2+, Composer 2+
-- MySQL 8+
-- Node.js 20+
-- Free [OpenWeather API key](https://openweathermap.org/api) (Current Weather Data)
+- **Backend:** PHP 8.2+, Composer 2+ (for Laravel 11)
+- **Frontend:** Node.js 20+ (for React 19)
+- **Database:** MySQL 8+
+- **API:** Free [OpenWeather API key](https://openweathermap.org/api) (Current Weather Data)
 
 ---
 
