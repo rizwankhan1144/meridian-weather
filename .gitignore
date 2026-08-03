@@ -1,0 +1,7 @@
+# editors
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# project-level: subdirectories have their own .gitignores

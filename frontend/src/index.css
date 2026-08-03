@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-deep: #0b1220;
+  --color-panel: #121b2e;
+  --color-panel-hover: #17223a;
+  --color-line: #1f2b40;
+  --color-amber: #f5a623;
+  --color-amber-soft: #fbcd7e;
+  --color-cyan: #4fd1c5;
+  --color-ink: #e8edf4;
+  --color-muted: #8291a8;
+  --color-danger: #f2545b;
+
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", "Menlo", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: var(--color-deep);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-amber);
+  color: var(--color-deep);
+}
+
+/* subtle scanline / instrument-panel texture */
+.panel-texture {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(232, 237, 244, 0.05) 1px, transparent 0);
+  background-size: 18px 18px;
+}
+
+/* focus ring, kept visible for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-amber);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@keyframes drift {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-drift {
+  animation: drift 40s linear infinite;
+}
